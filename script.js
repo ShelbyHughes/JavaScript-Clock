@@ -51,50 +51,50 @@ var updateClock = function()
 {
   var time = new Date().getHours();
   var messageText;
-  var image = "img/skysawakw.jpg";
+  var image = "url('/img/skysawakw.jpg')";
 
   var timeEventJS = document.getElementById("timeEvent");
   var imageJS = document.getElementById('Image');
   
   if (time == settime)
   {
-    image = "img/set-a-timer-on-google-slide(1).jpg";
+    image = "url('img/set-a-timer-on-google-slide(1).jpg')";
     messageText = "Set time!";
   }
   else if (time == wakeuptime)
   {
-    image = "img/how-to-wake-up-early.png";
+    image = "url('img/how-to-wake-up-early.png')";
     messageText = "Wake up!";
   }
   else if (time == lunchtime)
   {
-    image = "img/out_to_lunch-900x675.jpg";
+    image ="url('img/out_to_lunch-900x675.jpg')";
     messageText = "Let's have some lunch!";
   }
   else if (time == naptime)
   {
-    image = "img/naptime.jpg";
+    image = "url('img/naptime.jpg')";
     messageText = "Sleep tight!";
   }
   else if (time < noon)
   {
-    image = "img/Good-Morning-Wishes-1.jpg";
+    image = "url('img/Good-Morning-Wishes-1.jpg')";
     messageText = "Good morning!";
   }
   else if (time >= evening)
   {
-    image = "img/goodnight.jpeg";
+    image = "url('img/goodnight.jpeg')";
     messageText = "Good night!";
   }
   else
   {
-    image = "img/goodafternoon.jpg";
+    image = "url('img/goodafternoon.jpg')";
     messageText = "Good afternoon!";
   }
 
   console.log(messageText); 
   timeEventJS.innerText = messageText;
-  Image.src = image;
+  imageJS.src = image;
   
   showCurrentTime();
 };
