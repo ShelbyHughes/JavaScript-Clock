@@ -51,50 +51,50 @@ var updateClock = function()
 {
   var time = new Date().getHours();
   var messageText;
-  var image = <img alt="skysawake" src="img/skysawakw.jpg" />
+  var image = "img/skysawakw.jpg";
 
   var timeEventJS = document.getElementById("timeEvent");
   var imageJS = document.getElementById('Image');
   
   if (time == settime)
   {
-    image = <img alt="settimer" src="img/set-a-timer-on-google-slide(1).jpg" />
+    image = "img/set-a-timer-on-google-slide(1).jpg";
     messageText = "Set time!";
   }
   else if (time == wakeuptime)
   {
-    image = <img alt="wakeup" src="img/how-to-wake-up-early.png" />
+    image = "img/how-to-wake-up-early.png";
     messageText = "Wake up!";
   }
   else if (time == lunchtime)
   {
-    image = <img alt="lunch" src="img/out_to_lunch-900x675.jpg" />
+    image = "img/out_to_lunch-900x675.jpg";
     messageText = "Let's have some lunch!";
   }
   else if (time == naptime)
   {
-    image = <img alt="naptime" src="img/naptime.jpg" />
+    image = "img/naptime.jpg";
     messageText = "Sleep tight!";
   }
   else if (time < noon)
   {
-    image = <img alt="goodmorning" src="img/Good-Morning-Wishes-1.jpg.jpg" />
+    image = "img/Good-Morning-Wishes-1.jpg";
     messageText = "Good morning!";
   }
   else if (time >= evening)
   {
-    image = <img alt="Goodnight" src="img/goodnight.jpeg" />
+    image = "img/goodnight.jpeg";
     messageText = "Good night!";
   }
   else
   {
-    image = <img alt="goodafternoon" src="img/goodafternoon.jpg" />
+    image = "img/goodafternoon.jpg";
     messageText = "Good afternoon!";
   }
 
   console.log(messageText); 
   timeEventJS.innerText = messageText;
-  lolcatImage.src = image;
+  Image.src = image;
   
   showCurrentTime();
 };
@@ -105,7 +105,6 @@ var oneSecond = 1000;
 setInterval( updateClock, oneSecond);
 
 
-// Getting the Party Time Button To Work
 var setButton = document.getElementById("setTimeButton");
 
 var setEvent = function()
